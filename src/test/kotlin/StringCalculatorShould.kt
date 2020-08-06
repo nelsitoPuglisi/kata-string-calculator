@@ -12,4 +12,15 @@ class StringCalculatorShould {
         val expected = 3
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun `return 0 when input is empty`() {
+        //given
+        val calculator = StringCalculator()
+        //when
+        val actual = calculator.add("")
+        //then
+        val expected = 0
+        assertThat(actual).isEqualTo(expected)
+    }
 }
