@@ -29,4 +29,14 @@ class StringCalculatorShould {
         val expected = 0
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun `return same number when input has only one value`() {
+        //given
+        //when
+        val actual = calculator.add("2")
+        //then
+        val expected = 2
+        assertThat(actual).isEqualTo(expected)
+    }
 }
