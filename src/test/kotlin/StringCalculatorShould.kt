@@ -69,4 +69,15 @@ class StringCalculatorShould {
         val expected = 6
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun `support a different delimiter`() {
+        //given
+        val differentDelimiter = "//;\n1;2"
+        //when
+        val actual = calculator.add(differentDelimiter)
+        //then
+        val expected = 3
+        assertThat(actual).isEqualTo(expected)
+    }
 }
