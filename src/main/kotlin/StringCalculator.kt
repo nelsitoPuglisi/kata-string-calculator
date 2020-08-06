@@ -7,7 +7,7 @@ class StringCalculator {
         return if (numbers.isEmpty())
             0
         else {
-            val integers = numbers.split(",").map { toNumber(it) }
+            val integers = numbers.split(",", "\n").map { toNumber(it) }
             integers.sum()
         }
     }
