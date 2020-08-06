@@ -39,4 +39,14 @@ class StringCalculatorShould {
         val expected = 2
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun `add two numbers separated by space and comma`() {
+        //given
+        //when
+        val actual = calculator.add("1 , 2")
+        //then
+        val expected = 3
+        assertThat(actual).isEqualTo(expected)
+    }
 }
