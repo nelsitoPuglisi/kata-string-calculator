@@ -1,6 +1,8 @@
 class StringCalculator {
+
     fun add(numbers: String): Int {
-        TODO("Not yet implemented")
+        val integers = numbers.split(",").map { it.toInt() }
+        return integers.sum()
     }
 
 }
