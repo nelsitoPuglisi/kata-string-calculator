@@ -1,11 +1,18 @@
 import org.assertj.core.api.Assertions.*
+import org.junit.Before
 import org.junit.Test
 
 class StringCalculatorShould {
+    private lateinit var calculator: StringCalculator
+
+    @Before
+    fun setup() {
+        calculator = StringCalculator()
+    }
+
     @Test
     fun `add two numbers separated by comma`() {
         //given
-        val calculator = StringCalculator()
         //when
         val actual = calculator.add("1,2")
         //then
@@ -16,7 +23,6 @@ class StringCalculatorShould {
     @Test
     fun `return 0 when input is empty`() {
         //given
-        val calculator = StringCalculator()
         //when
         val actual = calculator.add("")
         //then
