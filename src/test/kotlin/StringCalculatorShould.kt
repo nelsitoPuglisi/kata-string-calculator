@@ -49,4 +49,14 @@ class StringCalculatorShould {
         val expected = 3
         assertThat(actual).isEqualTo(expected)
     }
+
+    @Test
+    fun `sum more than two numbers`() {
+        //given
+        //when
+        val actual = calculator.add("1, 2, 3")
+        //then
+        val expected = 6
+        assertThat(actual).isEqualTo(expected)
+    }
 }
